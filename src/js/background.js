@@ -12,12 +12,26 @@ function toggleState(state) {
   if (state === true) {
     icon.setBadgeText({text: 'on'});
     icon.setBadgeBackgroundColor({color: colors.on});
+    updateContent('hide()');
   } else {
     icon.setBadgeText({text: 'off'});
     icon.setBadgeBackgroundColor({color: colors.off});
+    updateContent('show()');
   }
   enabled = state;
   chrome.storage.local.set({'enabled': state});
+}
+
+/**
+ * Update the page content
+ */
+function updateContent(method) {
+  chrome.windows.getCurrent(function (currentWindow) {
+    chrome.tabs.query({active: true, windowId: currentWindow.id}, function(activeTabs) {
+      // chrome.tabs.executeScript(activeTabs[0].id, { code: method });
+      // chrome.tabs.executeScript(activeTabs[0].id, {file: 'content.js', allFrames: true});
+    });
+  });
 }
 
 /**
@@ -31,12 +45,12 @@ chrome.runtime.onInstalled.addListener(function (details) {
 /**
  * Listen for messages from popup
  */
-chrome.runtime.onMessage.addListener(function(obj, sender, sendResponse) {
-  console.log('onMessage', obj, sender, sendResponse);
-  if (obj.method === 'getEnabled') {
-    sendResponse({'enabled': enabled});
-  } else if (obj.method === 'setEnabled') {
-    toggleState(obj.data);
+chrome.runtime.onMessage.addListener(function(message, sender, callback) {
+  console.log('onMessage', message, sender, callback);
+  if (message.method === 'getEnabled') {
+    callback({'enabled': enabled});
+  } else if (message.method === 'setEnabled') {
+    toggleState(message.data);
   }
 });
 
