@@ -30,7 +30,7 @@
     "128": "img/icon-enabled/icon128.png"
   },
   "browser_action": {
-    "persistent": true,
+    "persistent": false,
     "matches": ["https://*.linkedin.com/*"],
     "default_icon": {
       "16": "img/icon-enabled/icon16.png",
@@ -48,5 +48,5 @@
     "js/*.js",
     "js/*.html"
   ],
-  "content_security_policy": "script-src 'self' https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js https://ssl.google-analytics.com/ga.js; object-src 'self'"
+  "content_security_policy": "script-src 'self'; object-src 'self'"
 }
