@@ -1,8 +1,8 @@
 body {
   color: #333;
-  font-size: 16px;
+  font-size: 14px;
   margin: 0;
-  padding: 1rem;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
   width: 400px;
 }
 
@@ -11,18 +11,19 @@ h2,
 h3,
 h4,
 p {
-  line-height: 1.5rem;
+  font-weight: normal;
+  line-height: 1.25rem;
   margin: 0 0 .5rem 0;
 }
 
 .details {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: .5rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 .details .image {
-  margin-right: 1rem;
+  margin-right: 1.5rem;
 }
 
 .details .image img {
@@ -31,16 +32,23 @@ p {
 
 .controls {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .controls .feedback {
-  border: 1px solid #999;
-  border-radius: .5rem;
-  color: #333;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: .25rem;
+  color: #2196F3;
   display: inline-block;
-  padding: .5rem;
+  padding: .5rem .75rem;
   text-decoration: none;
+  -webkit-transition: background-color .25s ease-in-out;
+  transition: background-color .25s ease-in-out;
+}
+
+.controls .feedback:hover {
+  background-color: #eee;
 }
 
 /* switch */

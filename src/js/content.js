@@ -25,10 +25,15 @@ function hashCode(str) {
  */
 function toggleState(state) {
   console.log('content.toggleState', state);
+  if (state === true) {
+    document.body.classList.add('antibias');
+  } else {
+    document.body.classList.remove('antibias');
+  }
   selectors.forEach((selector) => {
     var elements = document.getElementsByClassName(selector);
     [].forEach.call(elements, function(element) {
-      updateElement(element, state,);
+      updateElement(element, state);
     });
   });
 }
@@ -37,47 +42,40 @@ function toggleState(state) {
  * Update element state
  */
 function updateElement(el, state, hash) {
-  var type;
-  var val;
-  if (el.hasAttribute('src')) {
-    type = 'image';
-    val = el.getAttribute('src');
-  } else if (el.style.backgroundImage) {
-    type = 'background';
-    val = el.style.backgroundImage.slice(5, -2);
-  } else if (el.innerHTML.length) {
-    type = 'html';
-    val = el.innerHTML.trim();
-  }
-  if (!el.hasAttribute('data-bias')) {
-    el.setAttribute('data-bias', val);
-  }
   if (state === true) {
-    if (type === 'image' || type === 'background') {
-      // set <img> to be a transparent png, so we can show the background image
-      if (type === 'image') {
-        el.setAttribute('src', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=');
+    if (isImage(el)) {
+      var val = getImageVal(el);
+      if (!el.hasAttribute('data-bias')) {
+        el.setAttribute('data-bias', val);
       }
-      var hash = hashCode(el.getAttribute('data-bias'));
-      el.style.cssText = `
-        background-image: url('${pattern}');
-        background-repeat: repeat;
-        background-size: 800px;
-        background-position: ${hash.substring(0, 3) + "px " + hash.substring(1, 4) + "px"};
-        filter: hue-rotate(${hash.substring(2, 5)}deg);`;
-    } else if (type === 'html') {
-      el.innerHTML = '--------';
+      var hash = hashCode(val);
+      el.style.backgroundPosition = `${hash.substring(0, 3)}px ${hash.substring(1, 4)}px`;
+      el.style.filter = `hue-rotate(${hash.substring(2, 5)}deg)`;
     }
-  } else {
-    if (type === 'image') {
-      el.setAttribute('src', el.getAttribute('data-bias'));
-      el.style.cssText = '';
-    } else if (type === 'background') {
-      el.style.cssText = `background-image: url('${el.getAttribute('data-bias')}');`;
-    } else if (type === 'html') {
-      el.innerHTML = el.getAttribute('data-bias');
+  } else if (state === false) {
+    if (isImage(el)) {
+      el.style.backgroundPosition = '0px 0px';
+      el.style.filter = 'hue-rotate(0deg)';
+      if (el.hasAttribute('data-bias')) {
+        setImageVal(el, el.getAttribute('data-bias'));
+      }
     }
   }
+}
+
+/**
+ * Helper functions
+ */
+function isImage(el) {
+  return el.hasAttribute('src') || el.style.backgroundImage;
+}
+
+function getImageVal(el) {
+  return el.hasAttribute('src') ? el.getAttribute('src') : el.style.backgroundImage.slice(5, -2);
+}
+
+function setImageVal(el, val) {
+  return el.hasAttribute('src') ? el.setAttribute('src', val) : el.style.backgroundImage = val;
 }
 
 /**
