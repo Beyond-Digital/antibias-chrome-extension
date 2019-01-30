@@ -1,8 +1,12 @@
 var selectors = [
   'pv-top-card-section__name',
+  'pv-profile-sticky-header__name',
   'pv-top-card-section__photo',
+  'pv-top-card-section__edit-photo',
+  'pv-profile-sticky-header__image',
   'actor-name',
   'pv-browsemap-section__member-image',
+  'EntityPhoto-circle-4',
 ];
 var scrolling = 0;
 
