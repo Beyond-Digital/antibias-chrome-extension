@@ -12,26 +12,12 @@ function toggleState(state) {
   if (state === true) {
     icon.setBadgeText({text: 'on'});
     icon.setBadgeBackgroundColor({color: colors.on});
-    updateContent('hide()');
   } else {
     icon.setBadgeText({text: 'off'});
     icon.setBadgeBackgroundColor({color: colors.off});
-    updateContent('show()');
   }
   enabled = state;
   chrome.storage.local.set({'enabled': state});
-}
-
-/**
- * Update the page content
- */
-function updateContent(method) {
-  chrome.windows.getCurrent(function (currentWindow) {
-    chrome.tabs.query({active: true, windowId: currentWindow.id}, function(activeTabs) {
-      // chrome.tabs.executeScript(activeTabs[0].id, { code: method });
-      // chrome.tabs.executeScript(activeTabs[0].id, {file: 'content.js', allFrames: true});
-    });
-  });
 }
 
 /**
@@ -52,11 +38,16 @@ chrome.runtime.onMessage.addListener(function(message, sender, callback) {
   } else if (message.method === 'setEnabled') {
     toggleState(message.data);
   }
+  // send message to content.js
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    chrome.tabs.sendMessage(tabs[0].id, message);
+  });
 });
 
 /**
  * Set default state
  */
 chrome.storage.local.get('enabled', function (data) {
+  // chrome.tabs.executeScript(null, {file: 'js/content.js', allFrames: true});
   toggleState(data.enabled);
 });
