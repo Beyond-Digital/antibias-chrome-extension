@@ -30,7 +30,7 @@
       "web_accessible_resources": ["css/*", "js/*", "images/*"],
       "css" : ["css/content.css"],
       "js" : ["js/image.js", "js/content.js"],
-      "run_at": "document_end"
+      "run_at": "document_start"
     }
   ],
   "icons": {

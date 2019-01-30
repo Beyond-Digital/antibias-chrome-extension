@@ -4,6 +4,7 @@ var selectors = [
   'actor-name',
   'pv-browsemap-section__member-image',
 ];
+var scrolling = 0;
 
 /**
  * Get hash from string
@@ -36,20 +37,24 @@ function toggleState(state) {
  * Update element state
  */
 function updateElement(el, state, hash) {
-  var type = 'html';
-  var val = el.innerHTML.trim();
+  var type;
+  var val;
   if (el.hasAttribute('src')) {
     type = 'image';
     val = el.getAttribute('src');
   } else if (el.style.backgroundImage) {
     type = 'background';
     val = el.style.backgroundImage.slice(5, -2);
+  } else if (el.innerHTML.length) {
+    type = 'html';
+    val = el.innerHTML.trim();
   }
   if (!el.hasAttribute('data-bias')) {
     el.setAttribute('data-bias', val);
   }
   if (state === true) {
     if (type === 'image' || type === 'background') {
+      // set <img> to be a transparent png, so we can show the background image
       if (type === 'image') {
         el.setAttribute('src', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=');
       }
@@ -60,7 +65,7 @@ function updateElement(el, state, hash) {
         background-size: 800px;
         background-position: ${hash.substring(0, 3) + "px " + hash.substring(1, 4) + "px"};
         filter: hue-rotate(${hash.substring(2, 5)}deg);`;
-    } else {
+    } else if (type === 'html') {
       el.innerHTML = '--------';
     }
   } else {
@@ -69,10 +74,20 @@ function updateElement(el, state, hash) {
       el.style.cssText = '';
     } else if (type === 'background') {
       el.style.cssText = `background-image: url('${el.getAttribute('data-bias')}');`;
-    } else {
+    } else if (type === 'html') {
       el.innerHTML = el.getAttribute('data-bias');
     }
   }
+}
+
+/**
+ * Update page based on toggle
+ */
+function updatePage() {
+  chrome.storage.local.get('enabled', function (data) {
+    console.log('content.get', data);
+    toggleState(data.enabled);
+  });
 }
 
 /**
@@ -86,11 +101,28 @@ chrome.runtime.onMessage.addListener(function(message, sender, callback) {
 });
 
 /**
- * Set default state
+ * Update page on window events
  */
+window.addEventListener('DOMContentLoaded', function() {
+  console.log('window.DOMContentLoaded');
+  updatePage();
+});
 window.addEventListener('load', function() {
-  chrome.storage.local.get('enabled', function (data) {
-    console.log('content.get', data);
-    toggleState(data.enabled);
-  });
+  console.log('window.load');
+  updatePage();
+});
+window.onpopstate = function() {
+  console.log('window.popstate');
+  window.setTimeout(function () {
+    updatePage();
+  }, 200);
+};
+window.addEventListener('scroll', function(e) {
+  scrolling += 1;
+  if (scrolling === 10) {
+    window.requestAnimationFrame(function() {
+      updatePage();
+    });
+    scrolling = 0;
+  }
 });
