@@ -8,6 +8,7 @@ var enabled = false;
  * Toggle extension state
  */
 function toggleState(state) {
+  console.log('background.toggleState', state);
   var icon = chrome.browserAction;
   if (state === true) {
     icon.setBadgeText({text: 'on'});
@@ -18,13 +19,17 @@ function toggleState(state) {
   }
   enabled = state;
   chrome.storage.local.set({'enabled': state});
+  // send message to content
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    chrome.tabs.sendMessage(tabs[0].id, { method: 'setEnabled', data: state });
+  });
 }
 
 /**
  * Extension install
  */
 chrome.runtime.onInstalled.addListener(function (details) {
-  console.info('onInstalled', details);
+  console.info('background.onInstalled', details);
   toggleState(enabled);
 });
 
@@ -32,22 +37,18 @@ chrome.runtime.onInstalled.addListener(function (details) {
  * Listen for messages from popup
  */
 chrome.runtime.onMessage.addListener(function(message, sender, callback) {
-  console.log('onMessage', message, sender, callback);
+  console.log('background.onMessage', message, sender, callback);
   if (message.method === 'getEnabled') {
     callback({'enabled': enabled});
   } else if (message.method === 'setEnabled') {
     toggleState(message.data);
   }
-  // send message to content.js
-  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-    chrome.tabs.sendMessage(tabs[0].id, message);
-  });
 });
 
 /**
  * Set default state
  */
 chrome.storage.local.get('enabled', function (data) {
-  // chrome.tabs.executeScript(null, {file: 'js/content.js', allFrames: true});
+  console.log('background.get', data);
   toggleState(data.enabled);
 });
