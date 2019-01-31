@@ -3,8 +3,9 @@
 
 .antibias .pv-top-card-section__name,
 .antibias .pv-profile-sticky-header__name,
-.antibias .actor-name {
-  color: transparent;  
+.antibias .actor-name,
+.antibias .pv-recommendation-entity__detail .t-16 {
+  color: transparent !important;
   background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzMiIGhlaWdodD0iNTYiIHZpZXdCb3g9IjAgMCA3MyA1NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwKSI+CjxyZWN0IHdpZHRoPSI3MyIgaGVpZ2h0PSI1NiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDcuNjY2M0M2LjcwNDgyIDcuNTE5NzMgMTMuNDc3NyAxMC42MDU4IDE3LjYyNDIgMTYuOTY3NkwyOC41NDEyIDMzLjcxNjlDMzIuMjg5MSAzOS40NjcgNDAuNzEwNyAzOS40NjcgNDQuNDU4NiAzMy43MTY5TDU1LjM3NTYgMTYuOTY3NkM1OS41MjIxIDEwLjYwNTcgNjYuMjk1MSA3LjUxOTY4IDczIDcuNjY2MzFWMTguNjcyQzY5LjgxNDggMTguNTIyNiA2Ni41NjIzIDE5Ljk0OTQgNjQuNTkwOSAyMi45NzRMNTMuNjc0IDM5LjcyMzNDNDUuNTg2NSA1Mi4xMzE1IDI3LjQxMzQgNTIuMTMxNSAxOS4zMjU4IDM5LjcyMzNMOC40MDg4OCAyMi45NzRDNi40Mzc1MSAxOS45NDk0IDMuMTg1MTIgMTguNTIyNiAwIDE4LjY3MlY3LjY2NjNaIiBmaWxsPSJibGFjayIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwIj4KPHJlY3Qgd2lkdGg9IjczIiBoZWlnaHQ9IjU2IiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=');
   background-position: 0px center;
   background-repeat: repeat-x;
@@ -13,12 +14,27 @@
 
 .antibias .pv-top-card-section__name:hover,
 .antibias .pv-profile-sticky-header__name:hover,
-.antibias .actor-name:hover {
-  color: #333;
+.antibias .actor-name:hover,
+.antibias .pv-recommendation-entity__detail .t-16:hover {
+  color: #333 !important;
   background: transparent;
 }
 
 /* image */
+
+.antibias .pv-top-card-section__photo:hover,
+.antibias .pv-top-card-section__edit-photo:hover,
+.antibias .pv-profile-sticky-header__image:hover,
+.antibias .pv-browsemap-section__member-image:hover,
+.antibias .EntityPhoto-circle-4:hover {
+  content: normal !important;
+  filter: hue-rotate(0deg) !important;
+}
+
+.antibias .pv-browsemap-section__member-image,
+.antibias .EntityPhoto-circle-4 {
+  background-size: 273px !important;
+}
 
 .antibias .pv-top-card-section__photo,
 .antibias .pv-top-card-section__edit-photo,

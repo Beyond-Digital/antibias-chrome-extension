@@ -1,12 +1,9 @@
 var selectors = [
-  'pv-top-card-section__name',
-  'pv-profile-sticky-header__name',
-  'pv-top-card-section__photo',
-  'pv-top-card-section__edit-photo',
-  'pv-profile-sticky-header__image',
-  'actor-name',
-  'pv-browsemap-section__member-image',
-  'EntityPhoto-circle-4',
+  '.pv-top-card-section__photo',
+  '.pv-top-card-section__edit-photo',
+  '.pv-profile-sticky-header__image',
+  '.pv-browsemap-section__member-image',
+  '.EntityPhoto-circle-4'
 ];
 var scrolling = 0;
 
@@ -35,7 +32,7 @@ function toggleState(state) {
     document.body.classList.remove('antibias');
   }
   selectors.forEach((selector) => {
-    var elements = document.getElementsByClassName(selector);
+    var elements = document.querySelectorAll(selector);
     [].forEach.call(elements, function(element) {
       updateElement(element, state);
     });
@@ -47,8 +44,8 @@ function toggleState(state) {
  */
 function updateElement(el, state, hash) {
   if (state === true) {
-    if (isImage(el)) {
-      var val = getImageVal(el);
+    var val = getImageVal(el);
+    if (val && val !== '') {
       if (!el.hasAttribute('data-bias')) {
         el.setAttribute('data-bias', val);
       }
@@ -57,12 +54,10 @@ function updateElement(el, state, hash) {
       el.style.filter = `hue-rotate(${hash.substring(2, 5)}deg)`;
     }
   } else if (state === false) {
-    if (isImage(el)) {
-      el.style.backgroundPosition = '0px 0px';
-      el.style.filter = 'hue-rotate(0deg)';
-      if (el.hasAttribute('data-bias')) {
-        setImageVal(el, el.getAttribute('data-bias'));
-      }
+    el.style.backgroundPosition = '0px 0px';
+    el.style.filter = 'hue-rotate(0deg)';
+    if (el.hasAttribute('data-bias')) {
+      setImageVal(el, el.getAttribute('data-bias'));
     }
   }
 }
@@ -70,10 +65,6 @@ function updateElement(el, state, hash) {
 /**
  * Helper functions
  */
-function isImage(el) {
-  return el.hasAttribute('src') || el.style.backgroundImage;
-}
-
 function getImageVal(el) {
   return el.hasAttribute('src') ? el.getAttribute('src') : el.style.backgroundImage.slice(5, -2);
 }
