@@ -2,37 +2,28 @@
 <html lang="en">
 <head>
   <title>Antibias Chrome Extension</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700" />
-  <link rel="stylesheet" href="/css/material-components-web-0.41.1.css" />
-  <link rel="stylesheet" href="/css/popup.css" />
-  <script src="/js/jquery.3.3.1.min.js"></script>
-  <script src="/js/material-components-web-0.41.1.min.js"></script>
-  <script src="/js/popup.js"></script>
+  <link href="/css/popup.css" rel="stylesheet" />
 </head>
 <body>
-  <div class="mdc-card antibias-card">
-    <div class="antibias-card__primary">
-      <h2 class="antibias-card__title mdc-typography--subtitle1">Antibias</h2>
+  <div class="details">
+    <div class="image">
+      <img src="/images/128x128.png" alt="Icon" />
     </div>
-    <div class="antibias-card__secondary">
-      <p class="mdc-typography--body2">Antibias is a Chrome extension for obfuscating personal information from LinkedIn profiles that can lead to biases during the hiring process.</p>
-    </div>
-    <div class="mdc-card__actions">
-      <div class="mdc-card__action-buttons">
-        <a class="mdc-button mdc-card__action mdc-card__action--button mdc-ripple-upgraded" href="https://docs.google.com/forms/d/1UxHwcXCYN4nm48skArNfxDdUtccIbZl0YNIzIbgRdHQ/edit?usp=sharing" target="_blank">Feedback</a>
-      </div>
-      <div class="switch-container">
-        <label for="enable-switch" class="mdc-typography--body2">toggle on/off </label>
-        <div class="mdc-switch">
-          <div class="mdc-switch__track"></div>
-          <div class="mdc-switch__thumb-underlay">
-            <div class="mdc-switch__thumb">
-              <input type="checkbox" id="enable-switch" class="mdc-switch__native-control" role="switch">
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="description">
+      <h2 class="title">Antibias</h2>
+      <p class="desc">Antibias is a Chrome extension for obfuscating personal information from LinkedIn profiles that can lead to biases during the hiring process.</p>
     </div>
   </div>
+  <div class="controls">
+    <a class="feedback" href="https://docs.google.com/forms/d/1UxHwcXCYN4nm48skArNfxDdUtccIbZl0YNIzIbgRdHQ/edit?usp=sharing" target="_blank">Feedback</a>
+    <div class="toggle">
+      Toggle on/off 
+      <label class="switch">
+        <input type="checkbox" id="toggle" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+  <script src="/js/popup.js"></script>
 </body>
 </html>
