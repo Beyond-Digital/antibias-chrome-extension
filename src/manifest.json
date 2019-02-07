@@ -6,8 +6,8 @@
   "permissions": [
     "tabs",
     "storage",
-    "http://*/",
-    "https://*/"
+    "http://*.linkedin.com/*",
+    "https://*.linkedin.com/*"
   ],
   "background": {
     "persistent": false,
