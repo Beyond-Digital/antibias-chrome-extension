@@ -3,7 +3,11 @@ var selectors = [
   '.pv-top-card-section__edit-photo',
   '.pv-profile-sticky-header__image',
   '.pv-browsemap-section__member-image',
-  '.EntityPhoto-circle-4'
+  '.EntityPhoto-circle-4',
+  '.top-card-profile-image .image',
+  '.profile-image img',
+  '.antibias .EntityPhoto-circle-7',
+  '.antibias #topcard .module-body img'
 ];
 var scrolling = 0;
 
