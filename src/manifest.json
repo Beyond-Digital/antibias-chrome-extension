@@ -1,7 +1,7 @@
 {
   "name": "Antibias",
-  "version": "0.1",
-  "description": "Antibias is an extension designed to reduce bias in job applicant screening. It replaces LinkedIn profile photos with a unique pattern of geometric shapes and hides user names. This allows first impressions to form based on credentials and achievements–not superficial traits.",
+  "version": "1.3",
+  "description": "Antibias is an extension designed to reduce bias in job applicant screening. It replaces LinkedIn profile photos and hides user names.",
   "minimum_chrome_version": "16.0.884",
   "permissions": [
     "tabs",
