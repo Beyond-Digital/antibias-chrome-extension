@@ -1,13 +1,21 @@
 var selectors = [
-  '.pv-top-card-section__photo',
-  '.pv-top-card-section__edit-photo',
-  '.pv-profile-sticky-header__image',
-  '.pv-browsemap-section__member-image',
-  '.EntityPhoto-circle-4',
-  '.top-card-profile-image .image',
-  '.profile-image img',
+  '.antibias .pv-top-card-section__photo',
+  '.antibias .pv-top-card-section__edit-photo',
+  '.antibias .pv-profile-sticky-header__image',
+  '.antibias .pv-browsemap-section__member-image',
+  '.antibias .EntityPhoto-circle-4',
+  '.antibias .top-card-profile-image .image',
+  '.antibias .profile-image img',
   '.antibias .EntityPhoto-circle-7',
-  '.antibias #topcard .module-body img'
+  '.antibias #topcard .module-body img',
+  '.antibias #profile-recommendations .module-body .rec img',
+  '.antibias .EntityPhoto-circle-5',
+  '.antibias .EntityPhoto-circle-1-stackedFacepile',
+  '.antibias .EntityPhoto-circle-1',
+  '.antibias .ivm-image-view-model__circular-img',
+  '.antibias .EntityPhoto-circle-3',
+  '.antibias .EntityPhoto-circle-2',
+  '.antibias .msg-facepile-grid__img'
 ];
 var scrolling = 0;
 
