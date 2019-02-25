@@ -1,7 +1,7 @@
 {
   "name": "Antibias",
-  "version": "1.4",
-  "description": "Antibias is designed to reduce bias in job applicant screening. It replaces LinkedIn profile photos and hides user names.",
+  "version": "1.5",
+  "description": "Antibias hides user names and profile pictures on LinkedIn to reduce bias when screening job applicants. This allows first impressions to form based on credentials and achievements–not superficial traits.",
   "minimum_chrome_version": "16.0.884",
   "permissions": [
     "tabs",
