@@ -12,12 +12,24 @@
 .antibias .entity-block.profile .name a.title,
 .antibias #profile-recommendations .module-body .rec h4 a,
 .antibias .feed-shared-actor__name,
-.antibias .feed-shared-post-meta__name .hoverable-link-text {
-  color: transparent !important;
+.antibias .feed-shared-post-meta__name .hoverable-link-text,
+.antibias .follows-recommendation-card__name,
+.antibias .invitation-card__title,
+.antibias .mn-discovery-person-card__name--with-coverphoto,
+.antibias .jobs-profinder-card__provider-name,
+.antibias .msg-s-profile-card .profile-card-one-to-one__profile-link,
+.antibias .msg-s-message-group__name,
+.antibias .msg-conversation-card__participant-names,
+.antibias .feed-shared-header__text-view a span,
+.antibias .entity-hovercard__title strong,
+.antibias .feed-learning-bites-module__insight-text,
+.antibias .profile-rail-card__actor-link span {
   background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzMiIGhlaWdodD0iNTYiIHZpZXdCb3g9IjAgMCA3MyA1NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwKSI+CjxyZWN0IHdpZHRoPSI3MyIgaGVpZ2h0PSI1NiIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgNy42NjYzQzYuNzA0ODIgNy41MTk3MyAxMy40Nzc3IDEwLjYwNTggMTcuNjI0MiAxNi45Njc2TDI4LjU0MTIgMzMuNzE2OUMzMi4yODkxIDM5LjQ2NyA0MC43MTA3IDM5LjQ2NyA0NC40NTg2IDMzLjcxNjlMNTUuMzc1NiAxNi45Njc2QzU5LjUyMjEgMTAuNjA1NyA2Ni4yOTUxIDcuNTE5NjggNzMgNy42NjYzMVYxOC42NzJDNjkuODE0OCAxOC41MjI2IDY2LjU2MjMgMTkuOTQ5NCA2NC41OTA5IDIyLjk3NEw1My42NzQgMzkuNzIzM0M0NS41ODY1IDUyLjEzMTUgMjcuNDEzNCA1Mi4xMzE1IDE5LjMyNTggMzkuNzIzM0w4LjQwODg4IDIyLjk3NEM2LjQzNzUxIDE5Ljk0OTQgMy4xODUxMiAxOC41MjI2IDAgMTguNjcyVjcuNjY2M1oiIGZpbGw9ImJsYWNrIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDAiPgo8cmVjdCB3aWR0aD0iNzMiIGhlaWdodD0iNTYiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4=');
   background-position: 0px center;
   background-repeat: repeat-x;
   background-size: 26px;
+  color: transparent !important;
+  display: inline-block;
 }
 
 .antibias #topcard .module-body .info-container h1 .keyword,
@@ -38,10 +50,27 @@
 .antibias .entity-block.profile .name a.title:hover,
 .antibias #profile-recommendations .module-body .rec h4 a:hover,
 .antibias .feed-shared-actor__name:hover,
-.antibias .feed-shared-post-meta__name .hoverable-link-text:hover {
-  color: #333 !important;
+.antibias .feed-shared-post-meta__name .hoverable-link-text:hover,
+.antibias .follows-recommendation-card__name:hover,
+.antibias .invitation-card__title:hover,
+.antibias .mn-discovery-person-card__name--with-coverphoto:hover,
+.antibias .jobs-profinder-card__provider-name:hover,
+.antibias .msg-s-profile-card .profile-card-one-to-one__profile-link:hover,
+.antibias .msg-s-message-group__name:hover,
+.antibias .msg-conversation-card__participant-names:hover,
+.antibias .feed-shared-header__text-view a span:hover,
+.antibias .entity-hovercard__title strong:hover,
+.antibias .feed-learning-bites-module__insight-text:hover,
+.antibias .profile-rail-card__actor-link span:hover {
   background: transparent;
+  color: #333 !important;
 }
+
+/* smaller text needs background resized */
+.antibias .feed-shared-header__text-view a span {
+  background-size: 16px;
+}
+
 
 /* image */
 
@@ -61,7 +90,10 @@
 .antibias .ivm-image-view-model__circular-img:hover,
 .antibias .EntityPhoto-circle-3:hover,
 .antibias .EntityPhoto-circle-2:hover,
-.antibias .msg-facepile-grid__img:hover {
+.antibias .msg-facepile-grid__img:hover,
+.antibias .mn-discovery-person-card__image--with-coverphoto:hover,
+.antibias .flavor-profile-image__image:hover,
+.antibias .jobs-profinder-card__provider-img:hover {
   content: normal !important;
   filter: hue-rotate(0deg) !important;
 }
@@ -82,7 +114,8 @@
 .antibias .EntityPhoto-circle-1,
 .antibias .ivm-image-view-model__circular-img,
 .antibias .EntityPhoto-circle-3,
-.antibias .EntityPhoto-circle-2 {
+.antibias .EntityPhoto-circle-2,
+.antibias .flavor-profile-image__image {
   background-size: 273px !important;
 }
 
@@ -102,7 +135,10 @@
 .antibias .ivm-image-view-model__circular-img,
 .antibias .EntityPhoto-circle-3,
 .antibias .EntityPhoto-circle-2,
-.antibias .msg-facepile-grid__img {
+.antibias .msg-facepile-grid__img,
+.antibias .mn-discovery-person-card__image--with-coverphoto,
+.antibias .flavor-profile-image__image,
+.antibias .jobs-profinder-card__provider-img {
   background-repeat: repeat !important;
   background-size: 800px;
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=');
