@@ -15,7 +15,10 @@ var selectors = [
   '.antibias .ivm-image-view-model__circular-img',
   '.antibias .EntityPhoto-circle-3',
   '.antibias .EntityPhoto-circle-2',
-  '.antibias .msg-facepile-grid__img'
+  '.antibias .msg-facepile-grid__img',
+  '.antibias .mn-discovery-person-card__image--with-coverphoto',
+  '.antibias .flavor-profile-image__image',
+  '.antibias .jobs-profinder-card__provider-img'
 ];
 var scrolling = 0;
 
