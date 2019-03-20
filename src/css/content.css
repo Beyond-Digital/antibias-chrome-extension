@@ -23,7 +23,15 @@
 .antibias .feed-shared-header__text-view a span,
 .antibias .entity-hovercard__title strong,
 .antibias .feed-learning-bites-module__insight-text,
-.antibias .profile-rail-card__actor-link span {
+.antibias .profile-rail-card__actor-link span,
+.antibias .profile-info__profile-name,
+.antibias .match-name a,
+.antibias .name .given-name,
+.antibias .identity-card .body .name a,
+.antibias .profile-card-col .name,
+.antibias #messages-overlay .ip-details-container .ip-name,
+.antibias .conversation-item .name,
+.antibias .participant-profile .name a {
   background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzMiIGhlaWdodD0iNTYiIHZpZXdCb3g9IjAgMCA3MyA1NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwKSI+CjxyZWN0IHdpZHRoPSI3MyIgaGVpZ2h0PSI1NiIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgNy42NjYzQzYuNzA0ODIgNy41MTk3MyAxMy40Nzc3IDEwLjYwNTggMTcuNjI0MiAxNi45Njc2TDI4LjU0MTIgMzMuNzE2OUMzMi4yODkxIDM5LjQ2NyA0MC43MTA3IDM5LjQ2NyA0NC40NTg2IDMzLjcxNjlMNTUuMzc1NiAxNi45Njc2QzU5LjUyMjEgMTAuNjA1NyA2Ni4yOTUxIDcuNTE5NjggNzMgNy42NjYzMVYxOC42NzJDNjkuODE0OCAxOC41MjI2IDY2LjU2MjMgMTkuOTQ5NCA2NC41OTA5IDIyLjk3NEw1My42NzQgMzkuNzIzM0M0NS41ODY1IDUyLjEzMTUgMjcuNDEzNCA1Mi4xMzE1IDE5LjMyNTggMzkuNzIzM0w4LjQwODg4IDIyLjk3NEM2LjQzNzUxIDE5Ljk0OTQgMy4xODUxMiAxOC41MjI2IDAgMTguNjcyVjcuNjY2M1oiIGZpbGw9ImJsYWNrIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDAiPgo8cmVjdCB3aWR0aD0iNzMiIGhlaWdodD0iNTYiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4=');
   background-position: 0px center;
   background-repeat: repeat-x;
@@ -37,6 +45,11 @@
   background: none;
   border: none;
   color: transparent !important;
+}
+
+.antibias #topcard .module-body .info-container h1:hover .keyword,
+.antibias .name .search-result-profile-link:hover b {
+  color: inherit !important;
 }
 
 .antibias .pv-top-card-section__name:hover,
@@ -61,13 +74,23 @@
 .antibias .feed-shared-header__text-view a span:hover,
 .antibias .entity-hovercard__title strong:hover,
 .antibias .feed-learning-bites-module__insight-text:hover,
-.antibias .profile-rail-card__actor-link span:hover {
+.antibias .profile-rail-card__actor-link span:hover,
+.antibias .profile-info__profile-name:hover,
+.antibias .match-name a:hover,
+.antibias .name .given-name:hover,
+.antibias .identity-card .body .name a:hover,
+.antibias .profile-card-col .name:hover,
+.antibias #messages-overlay .ip-details-container .ip-name:hover,
+.antibias .conversation-item .name:hover,
+.antibias .participant-profile .name a:hover {
   background: transparent;
   color: #333 !important;
 }
 
 /* smaller text needs background resized */
-.antibias .feed-shared-header__text-view a span {
+.antibias .feed-shared-header__text-view a span,
+.antibias .match-name a,
+.antibias .conversation-item .name {
   background-size: 16px;
 }
 
@@ -93,7 +116,13 @@
 .antibias .msg-facepile-grid__img:hover,
 .antibias .mn-discovery-person-card__image--with-coverphoto:hover,
 .antibias .flavor-profile-image__image:hover,
-.antibias .jobs-profinder-card__provider-img:hover {
+.antibias .jobs-profinder-card__provider-img:hover,
+.antibias .profile-preview__img:hover,
+.antibias .picture-link .medium-img:hover,
+.antibias #messages-overlay .ip-pic-container img:hover,
+.antibias .conversation-item .profile-img:hover,
+.antibias .participant-profile .basic-info .profile-img:hover {
+  background-image: inherit !important;
   content: normal !important;
   filter: hue-rotate(0deg) !important;
 }
@@ -105,7 +134,11 @@
 .antibias .profile-image img,
 .antibias #profile-recommendations .module-body .rec img,
 .antibias .EntityPhoto-circle-5,
-.antibias .msg-facepile-grid__img {
+.antibias .msg-facepile-grid__img,
+.antibias .picture-link .medium-img,
+.antibias #messages-overlay .ip-pic-container img,
+.antibias .conversation-item .profile-img,
+.antibias .participant-profile .basic-info .profile-img {
   background-size: 273px !important;
 }
 
@@ -138,7 +171,12 @@
 .antibias .msg-facepile-grid__img,
 .antibias .mn-discovery-person-card__image--with-coverphoto,
 .antibias .flavor-profile-image__image,
-.antibias .jobs-profinder-card__provider-img {
+.antibias .jobs-profinder-card__provider-img,
+.antibias .profile-preview__img,
+.antibias .picture-link .medium-img,
+.antibias #messages-overlay .ip-pic-container img,
+.antibias .conversation-item .profile-img,
+.antibias .participant-profile .basic-info .profile-img {
   background-repeat: repeat !important;
   background-size: 800px;
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=');

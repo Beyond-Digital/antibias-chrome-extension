@@ -18,7 +18,12 @@ var selectors = [
   '.antibias .msg-facepile-grid__img',
   '.antibias .mn-discovery-person-card__image--with-coverphoto',
   '.antibias .flavor-profile-image__image',
-  '.antibias .jobs-profinder-card__provider-img'
+  '.antibias .jobs-profinder-card__provider-img',
+  '.antibias .profile-preview__img',
+  '.antibias .picture-link .medium-img',
+  '.antibias #messages-overlay .ip-pic-container img',
+  '.antibias .conversation-item .profile-img',
+  '.antibias .participant-profile .basic-info .profile-img'
 ];
 var scrolling = 0;
 
