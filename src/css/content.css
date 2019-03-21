@@ -1,37 +1,37 @@
 
 /* text */
 
-.antibias .pv-top-card-section__name,
-.antibias .pv-profile-sticky-header__name,
-.antibias .actor-name,
-.antibias .pv-recommendation-entity__detail .t-16,
-.antibias .name .search-result-profile-link,
-.antibias .profile-card-col .entity-block .name a,
-.antibias .pv-go-to-connections-candidate__text,
-.antibias #topcard .module-body .info-container h1,
-.antibias .entity-block.profile .name a.title,
-.antibias #profile-recommendations .module-body .rec h4 a,
-.antibias .feed-shared-actor__name,
-.antibias .feed-shared-post-meta__name .hoverable-link-text,
-.antibias .follows-recommendation-card__name,
-.antibias .invitation-card__title,
-.antibias .mn-discovery-person-card__name--with-coverphoto,
-.antibias .jobs-profinder-card__provider-name,
-.antibias .msg-s-profile-card .profile-card-one-to-one__profile-link,
-.antibias .msg-s-message-group__name,
-.antibias .msg-conversation-card__participant-names,
-.antibias .feed-shared-header__text-view a span,
-.antibias .entity-hovercard__title strong,
-.antibias .feed-learning-bites-module__insight-text,
-.antibias .profile-rail-card__actor-link span,
-.antibias .profile-info__profile-name,
-.antibias .match-name a,
-.antibias .name .given-name,
-.antibias .identity-card .body .name a,
-.antibias .profile-card-col .name,
-.antibias #messages-overlay .ip-details-container .ip-name,
-.antibias .conversation-item .name,
-.antibias .participant-profile .name a {
+.antibias .pv-top-card-section__name:not(:hover),
+.antibias .pv-profile-sticky-header__name:not(:hover),
+.antibias .actor-name:not(:hover),
+.antibias .pv-recommendation-entity__detail .t-16:not(:hover),
+.antibias .name .search-result-profile-link:not(:hover),
+.antibias .profile-card-col .entity-block .name a:not(:hover),
+.antibias .pv-go-to-connections-candidate__text:not(:hover),
+.antibias #topcard .module-body .info-container h1:not(:hover),
+.antibias .entity-block.profile .name a.title:not(:hover),
+.antibias #profile-recommendations .module-body .rec h4 a:not(:hover),
+.antibias .feed-shared-actor__name:not(:hover),
+.antibias .feed-shared-post-meta__name .hoverable-link-text:not(:hover),
+.antibias .follows-recommendation-card__name:not(:hover),
+.antibias .invitation-card__title:not(:hover),
+.antibias .mn-discovery-person-card__name--with-coverphoto:not(:hover),
+.antibias .jobs-profinder-card__provider-name:not(:hover),
+.antibias .msg-s-profile-card .profile-card-one-to-one__profile-link:not(:hover),
+.antibias .msg-s-message-group__name:not(:hover),
+.antibias .msg-conversation-card__participant-names:not(:hover),
+.antibias .feed-shared-header__text-view a span:not(:hover),
+.antibias .entity-hovercard__title strong:not(:hover),
+.antibias .feed-learning-bites-module__insight-text:not(:hover),
+.antibias .profile-rail-card__actor-link span:not(:hover),
+.antibias .profile-info__profile-name:not(:hover),
+.antibias .match-name a:not(:hover),
+.antibias .name .given-name:not(:hover),
+.antibias .identity-card .body .name a:not(:hover),
+.antibias .profile-card-col .name:not(:hover),
+.antibias #messages-overlay .ip-details-container .ip-name:not(:hover),
+.antibias .conversation-item .name:not(:hover),
+.antibias .participant-profile .name a:not(:hover) {
   background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzMiIGhlaWdodD0iNTYiIHZpZXdCb3g9IjAgMCA3MyA1NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwKSI+CjxyZWN0IHdpZHRoPSI3MyIgaGVpZ2h0PSI1NiIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgNy42NjYzQzYuNzA0ODIgNy41MTk3MyAxMy40Nzc3IDEwLjYwNTggMTcuNjI0MiAxNi45Njc2TDI4LjU0MTIgMzMuNzE2OUMzMi4yODkxIDM5LjQ2NyA0MC43MTA3IDM5LjQ2NyA0NC40NTg2IDMzLjcxNjlMNTUuMzc1NiAxNi45Njc2QzU5LjUyMjEgMTAuNjA1NyA2Ni4yOTUxIDcuNTE5NjggNzMgNy42NjYzMVYxOC42NzJDNjkuODE0OCAxOC41MjI2IDY2LjU2MjMgMTkuOTQ5NCA2NC41OTA5IDIyLjk3NEw1My42NzQgMzkuNzIzM0M0NS41ODY1IDUyLjEzMTUgMjcuNDEzNCA1Mi4xMzE1IDE5LjMyNTggMzkuNzIzM0w4LjQwODg4IDIyLjk3NEM2LjQzNzUxIDE5Ljk0OTQgMy4xODUxMiAxOC41MjI2IDAgMTguNjcyVjcuNjY2M1oiIGZpbGw9ImJsYWNrIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDAiPgo8cmVjdCB3aWR0aD0iNzMiIGhlaWdodD0iNTYiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4=');
   background-position: 0px center;
   background-repeat: repeat-x;
@@ -40,57 +40,17 @@
   display: inline-block;
 }
 
-.antibias #topcard .module-body .info-container h1 .keyword,
-.antibias .name .search-result-profile-link b {
+.antibias #topcard .module-body .info-container h1 .keyword:not(:hover),
+.antibias .name .search-result-profile-link b:not(:hover) {
   background: none;
   border: none;
   color: transparent !important;
 }
 
-.antibias #topcard .module-body .info-container h1:hover .keyword,
-.antibias .name .search-result-profile-link:hover b {
-  color: inherit !important;
-}
-
-.antibias .pv-top-card-section__name:hover,
-.antibias .pv-profile-sticky-header__name:hover,
-.antibias .actor-name:hover,
-.antibias .pv-recommendation-entity__detail .t-16:hover,
-.antibias .name .search-result-profile-link:hover,
-.antibias .profile-card-col .entity-block .name a:hover,
-.antibias .pv-go-to-connections-candidate__text:hover,
-.antibias #topcard .module-body .info-container h1:hover,
-.antibias .entity-block.profile .name a.title:hover,
-.antibias #profile-recommendations .module-body .rec h4 a:hover,
-.antibias .feed-shared-actor__name:hover,
-.antibias .feed-shared-post-meta__name .hoverable-link-text:hover,
-.antibias .follows-recommendation-card__name:hover,
-.antibias .invitation-card__title:hover,
-.antibias .mn-discovery-person-card__name--with-coverphoto:hover,
-.antibias .jobs-profinder-card__provider-name:hover,
-.antibias .msg-s-profile-card .profile-card-one-to-one__profile-link:hover,
-.antibias .msg-s-message-group__name:hover,
-.antibias .msg-conversation-card__participant-names:hover,
-.antibias .feed-shared-header__text-view a span:hover,
-.antibias .entity-hovercard__title strong:hover,
-.antibias .feed-learning-bites-module__insight-text:hover,
-.antibias .profile-rail-card__actor-link span:hover,
-.antibias .profile-info__profile-name:hover,
-.antibias .match-name a:hover,
-.antibias .name .given-name:hover,
-.antibias .identity-card .body .name a:hover,
-.antibias .profile-card-col .name:hover,
-.antibias #messages-overlay .ip-details-container .ip-name:hover,
-.antibias .conversation-item .name:hover,
-.antibias .participant-profile .name a:hover {
-  background: transparent;
-  color: #333 !important;
-}
-
 /* smaller text needs background resized */
-.antibias .feed-shared-header__text-view a span,
-.antibias .match-name a,
-.antibias .conversation-item .name {
+.antibias .feed-shared-header__text-view a span:not(:hover),
+.antibias .match-name a:not(:hover),
+.antibias .conversation-item .name:not(:hover) {
   background-size: 16px;
 }
 
@@ -122,61 +82,60 @@
 .antibias #messages-overlay .ip-pic-container img:hover,
 .antibias .conversation-item .profile-img:hover,
 .antibias .participant-profile .basic-info .profile-img:hover {
-  background-image: inherit !important;
-  content: normal !important;
+  background-position: 0 0 !important;
   filter: hue-rotate(0deg) !important;
 }
 
 /* smaller images need background resized */
-.antibias .pv-browsemap-section__member-image,
-.antibias .EntityPhoto-circle-4,
-.antibias .top-card-profile-image .image,
-.antibias .profile-image img,
-.antibias #profile-recommendations .module-body .rec img,
-.antibias .EntityPhoto-circle-5,
-.antibias .msg-facepile-grid__img,
-.antibias .picture-link .medium-img,
-.antibias #messages-overlay .ip-pic-container img,
-.antibias .conversation-item .profile-img,
-.antibias .participant-profile .basic-info .profile-img {
+.antibias .pv-browsemap-section__member-image:not(:hover),
+.antibias .EntityPhoto-circle-4:not(:hover),
+.antibias .top-card-profile-image .image:not(:hover),
+.antibias .profile-image img:not(:hover),
+.antibias #profile-recommendations .module-body .rec img:not(:hover),
+.antibias .EntityPhoto-circle-5:not(:hover),
+.antibias .msg-facepile-grid__img:not(:hover),
+.antibias .picture-link .medium-img:not(:hover),
+.antibias #messages-overlay .ip-pic-container img:not(:hover),
+.antibias .conversation-item .profile-img:not(:hover),
+.antibias .participant-profile .basic-info .profile-img:not(:hover) {
   background-size: 273px !important;
 }
 
 /* tiny images need background resized */
-.antibias .EntityPhoto-circle-1-stackedFacepile,
-.antibias .EntityPhoto-circle-1,
-.antibias .ivm-image-view-model__circular-img,
-.antibias .EntityPhoto-circle-3,
-.antibias .EntityPhoto-circle-2,
-.antibias .flavor-profile-image__image {
+.antibias .EntityPhoto-circle-1-stackedFacepile:not(:hover),
+.antibias .EntityPhoto-circle-1:not(:hover),
+.antibias .ivm-image-view-model__circular-img:not(:hover),
+.antibias .EntityPhoto-circle-3:not(:hover),
+.antibias .EntityPhoto-circle-2:not(:hover),
+.antibias .flavor-profile-image__image:not(:hover) {
   background-size: 273px !important;
 }
 
-.antibias .pv-top-card-section__photo,
-.antibias .pv-top-card-section__edit-photo,
-.antibias .pv-profile-sticky-header__image,
-.antibias .pv-browsemap-section__member-image,
-.antibias .EntityPhoto-circle-4,
-.antibias .top-card-profile-image .image,
-.antibias .profile-image img,
-.antibias .EntityPhoto-circle-7,
-.antibias #topcard .module-body img,
-.antibias #profile-recommendations .module-body .rec img,
-.antibias .EntityPhoto-circle-5,
-.antibias .EntityPhoto-circle-1-stackedFacepile,
-.antibias .EntityPhoto-circle-1,
-.antibias .ivm-image-view-model__circular-img,
-.antibias .EntityPhoto-circle-3,
-.antibias .EntityPhoto-circle-2,
-.antibias .msg-facepile-grid__img,
-.antibias .mn-discovery-person-card__image--with-coverphoto,
-.antibias .flavor-profile-image__image,
-.antibias .jobs-profinder-card__provider-img,
-.antibias .profile-preview__img,
-.antibias .picture-link .medium-img,
-.antibias #messages-overlay .ip-pic-container img,
-.antibias .conversation-item .profile-img,
-.antibias .participant-profile .basic-info .profile-img {
+.antibias .pv-top-card-section__photo:not(:hover),
+.antibias .pv-top-card-section__edit-photo:not(:hover),
+.antibias .pv-profile-sticky-header__image:not(:hover),
+.antibias .pv-browsemap-section__member-image:not(:hover),
+.antibias .EntityPhoto-circle-4:not(:hover),
+.antibias .top-card-profile-image .image:not(:hover),
+.antibias .profile-image img:not(:hover),
+.antibias .EntityPhoto-circle-7:not(:hover),
+.antibias #topcard .module-body img:not(:hover),
+.antibias #profile-recommendations .module-body .rec img:not(:hover),
+.antibias .EntityPhoto-circle-5:not(:hover),
+.antibias .EntityPhoto-circle-1-stackedFacepile:not(:hover),
+.antibias .EntityPhoto-circle-1:not(:hover),
+.antibias .ivm-image-view-model__circular-img:not(:hover),
+.antibias .EntityPhoto-circle-3:not(:hover),
+.antibias .EntityPhoto-circle-2:not(:hover),
+.antibias .msg-facepile-grid__img:not(:hover),
+.antibias .mn-discovery-person-card__image--with-coverphoto:not(:hover),
+.antibias .flavor-profile-image__image:not(:hover),
+.antibias .jobs-profinder-card__provider-img:not(:hover),
+.antibias .profile-preview__img:not(:hover),
+.antibias .picture-link .medium-img:not(:hover),
+.antibias #messages-overlay .ip-pic-container img:not(:hover),
+.antibias .conversation-item .profile-img:not(:hover),
+.antibias .participant-profile .basic-info .profile-img:not(:hover) {
   background-repeat: repeat !important;
   background-size: 800px;
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=');
