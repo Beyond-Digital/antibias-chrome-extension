@@ -23,7 +23,11 @@ var selectors = [
   '.antibias .picture-link .medium-img',
   '.antibias #messages-overlay .ip-pic-container img',
   '.antibias .conversation-item .profile-img',
-  '.antibias .participant-profile .basic-info .profile-img'
+  '.antibias .participant-profile .basic-info .profile-img',
+  '.antibias .system-search-results__profile-image',
+  '.antibias .nav-inmail__sender-profile-photo',
+  '.antibias .artdeco-entity-lockup__image .lockup__image',
+  '.antibias .accomplishment-contributors__contributor-profile-picture'
 ];
 var scrolling = 0;
 
