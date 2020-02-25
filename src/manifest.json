@@ -1,6 +1,6 @@
 {
   "name": "Antibias",
-  "version": "1.7.3",
+  "version": "1.7.4",
   "description": "Antibias hides user names and profile pictures on LinkedIn to reduce bias when screening job applicants.",
   "minimum_chrome_version": "63",
   "permissions": [

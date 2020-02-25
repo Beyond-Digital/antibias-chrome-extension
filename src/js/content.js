@@ -27,7 +27,8 @@ var selectors = [
   '.system-search-results__profile-image',
   '.nav-inmail__sender-profile-photo',
   '.artdeco-entity-lockup__image .lockup__image',
-  '.accomplishment-contributors__contributor-profile-picture'
+  '.accomplishment-contributors__contributor-profile-picture',
+  '.EntityPhoto-circle-9'
 ];
 var scrolling = 0;
 
