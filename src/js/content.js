@@ -28,7 +28,8 @@ var selectors = [
   '.nav-inmail__sender-profile-photo',
   '.artdeco-entity-lockup__image .lockup__image',
   '.accomplishment-contributors__contributor-profile-picture',
-  '.EntityPhoto-circle-9'
+  '.EntityPhoto-circle-9',
+  '.profile-photo-edit__preview'
 ];
 var scrolling = 0;
 

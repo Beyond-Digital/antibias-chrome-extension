@@ -4,7 +4,7 @@
   "description": "Antibias hides user names and profile pictures on LinkedIn to reduce bias when screening job applicants.",
   "minimum_chrome_version": "63",
   "permissions": [
-    "tabs",
+    "activeTab",
     "storage",
     "http://*.linkedin.com/*",
     "https://*.linkedin.com/*"

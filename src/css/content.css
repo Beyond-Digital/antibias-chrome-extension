@@ -91,7 +91,8 @@
 .antibias .nav-inmail__sender-profile-photo:hover,
 .antibias .artdeco-entity-lockup__image .lockup__image:hover
 .antibias .accomplishment-contributors__contributor-profile-picture:hover,
-.antibias .EntityPhoto-circle-9:hover {
+.antibias .EntityPhoto-circle-9:hover,
+.antibias .profile-photo-edit__preview:hover {
   background-position: 0 0 !important;
   filter: hue-rotate(0deg) !important;
 }
@@ -154,7 +155,8 @@
 .antibias .nav-inmail__sender-profile-photo:not(:hover),
 .antibias .artdeco-entity-lockup__image .lockup__image:not(:hover)
 .antibias .accomplishment-contributors__contributor-profile-picture:not(:hover),
-.antibias .EntityPhoto-circle-9:not(:hover) {
+.antibias .EntityPhoto-circle-9:not(:hover),
+.antibias .profile-photo-edit__preview:not(:hover) {
   background-repeat: repeat !important;
   background-size: 800px;
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=');
