@@ -1,29 +1,34 @@
 var selectors = [
-  '.antibias .pv-top-card-section__photo',
-  '.antibias .pv-top-card-section__edit-photo',
-  '.antibias .pv-profile-sticky-header__image',
-  '.antibias .pv-browsemap-section__member-image',
-  '.antibias .EntityPhoto-circle-4',
-  '.antibias .top-card-profile-image .image',
-  '.antibias .profile-image img',
-  '.antibias .EntityPhoto-circle-7',
-  '.antibias #topcard .module-body img',
-  '.antibias #profile-recommendations .module-body .rec img',
-  '.antibias .EntityPhoto-circle-5',
-  '.antibias .EntityPhoto-circle-1-stackedFacepile',
-  '.antibias .EntityPhoto-circle-1',
-  '.antibias .ivm-image-view-model__circular-img',
-  '.antibias .EntityPhoto-circle-3',
-  '.antibias .EntityPhoto-circle-2',
-  '.antibias .msg-facepile-grid__img',
-  '.antibias .mn-discovery-person-card__image--with-coverphoto',
-  '.antibias .flavor-profile-image__image',
-  '.antibias .jobs-profinder-card__provider-img',
-  '.antibias .profile-preview__img',
-  '.antibias .picture-link .medium-img',
-  '.antibias #messages-overlay .ip-pic-container img',
-  '.antibias .conversation-item .profile-img',
-  '.antibias .participant-profile .basic-info .profile-img'
+  '.pv-top-card-section__photo',
+  '.pv-top-card-section__edit-photo',
+  '.pv-profile-sticky-header__image',
+  '.pv-browsemap-section__member-image',
+  '.EntityPhoto-circle-4',
+  '.top-card-profile-image .image',
+  '.profile-image img',
+  '.EntityPhoto-circle-7',
+  '#topcard .module-body img',
+  '#profile-recommendations .module-body .rec img',
+  '.EntityPhoto-circle-5',
+  '.EntityPhoto-circle-1-stackedFacepile',
+  '.EntityPhoto-circle-1',
+  '.ivm-image-view-model__circular-img',
+  '.EntityPhoto-circle-3',
+  '.EntityPhoto-circle-2',
+  '.msg-facepile-grid__img',
+  '.mn-discovery-person-card__image--with-coverphoto',
+  '.flavor-profile-image__image',
+  '.jobs-profinder-card__provider-img',
+  '.profile-preview__img',
+  '.picture-link .medium-img',
+  '#messages-overlay .ip-pic-container img',
+  '.conversation-item .profile-img',
+  '.participant-profile .basic-info .profile-img',
+  '.system-search-results__profile-image',
+  '.nav-inmail__sender-profile-photo',
+  '.artdeco-entity-lockup__image .lockup__image',
+  '.accomplishment-contributors__contributor-profile-picture',
+  '.EntityPhoto-circle-9'
 ];
 var scrolling = 0;
 
@@ -62,7 +67,7 @@ function toggleState(state) {
 /**
  * Update element state
  */
-function updateElement(el, state, hash) {
+function updateElement(el, state) {
   if (state === true) {
     var val = getImageVal(el);
     if (val && val !== '') {
