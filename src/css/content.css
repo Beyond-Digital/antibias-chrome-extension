@@ -43,6 +43,8 @@
 .antibias .discover-person-card__name,
 .antibias .discover-person-follow-card__name,
 .antibias .msg-spinmail-thread__name,
+.antibias .text-heading-xlarge,
+.antibias .entity-result__content .entity-result__title-line .app-aware-link,
 .antibias .launchpad-pending-invite__name {
   background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzMiIGhlaWdodD0iNTYiIHZpZXdCb3g9IjAgMCA3MyA1NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwKSI+CjxyZWN0IHdpZHRoPSI3MyIgaGVpZ2h0PSI1NiIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgNy42NjYzQzYuNzA0ODIgNy41MTk3MyAxMy40Nzc3IDEwLjYwNTggMTcuNjI0MiAxNi45Njc2TDI4LjU0MTIgMzMuNzE2OUMzMi4yODkxIDM5LjQ2NyA0MC43MTA3IDM5LjQ2NyA0NC40NTg2IDMzLjcxNjlMNTUuMzc1NiAxNi45Njc2QzU5LjUyMjEgMTAuNjA1NyA2Ni4yOTUxIDcuNTE5NjggNzMgNy42NjYzMVYxOC42NzJDNjkuODE0OCAxOC41MjI2IDY2LjU2MjMgMTkuOTQ5NCA2NC41OTA5IDIyLjk3NEw1My42NzQgMzkuNzIzM0M0NS41ODY1IDUyLjEzMTUgMjcuNDEzNCA1Mi4xMzE1IDE5LjMyNTggMzkuNzIzM0w4LjQwODg4IDIyLjk3NEM2LjQzNzUxIDE5Ljk0OTQgMy4xODUxMiAxOC41MjI2IDAgMTguNjcyVjcuNjY2M1oiIGZpbGw9ImJsYWNrIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDAiPgo8cmVjdCB3aWR0aD0iNzMiIGhlaWdodD0iNTYiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4=');
   background-position: 0px center;
@@ -164,6 +166,7 @@
 .antibias .artdeco-entity-lockup__image .lockup__image:not(:hover)
 .antibias .accomplishment-contributors__contributor-profile-picture:not(:hover),
 .antibias .EntityPhoto-circle-9:not(:hover),
+.antibias .pv-top-card-profile-picture__image:not(:hover),
 .antibias .profile-photo-edit__preview:not(:hover) {
   background-repeat: repeat !important;
   background-size: 800px;

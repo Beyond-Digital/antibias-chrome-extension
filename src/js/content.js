@@ -6,7 +6,9 @@ var selectors = [
   '.EntityPhoto-circle-4',
   '.top-card-profile-image .image',
   '.profile-image img',
+  '.pv-top-card-profile-picture__image',
   '.EntityPhoto-circle-7',
+  '.text-heading-xlarge', 
   '#topcard .module-body img',
   '#profile-recommendations .module-body .rec img',
   '.EntityPhoto-circle-5',
@@ -29,7 +31,8 @@ var selectors = [
   '.artdeco-entity-lockup__image .lockup__image',
   '.accomplishment-contributors__contributor-profile-picture',
   '.EntityPhoto-circle-9',
-  '.profile-photo-edit__preview'
+  '.profile-photo-edit__preview', 
+  '.entity-result__content .entity-result__title-line .app-aware-link'
 ];
 var scrolling = 0;
 
